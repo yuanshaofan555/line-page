@@ -3,28 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>服装批发</title>
+  <title>CJ Design - 我的店铺</title>
   <style>
+    /* 页面整体背景 */
     body {
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #333;
       margin: 0;
       padding: 0;
       text-align: center;
+      background: url("https://raw.githubusercontent.com/yuanshaofan555/line-page/main/0cb12a5d41c9bc911245450aac091ef.jpg") no-repeat center center fixed;
+      background-size: cover;
+      /* 褪色效果 */
+      position: relative;
     }
+
+    /* 半透明遮罩让文字可读 */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7); /* 白色半透明 */
+      z-index: 0;
+    }
+
     .container {
+      position: relative;
+      z-index: 1; /* 保证在遮罩上面 */
       max-width: 400px;
-      margin: 20px auto;
-      background: #fff;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.8); /* 半透明容器更突出按钮 */
       border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+
     h1 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #06C755;
     }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: #333;
+    }
+
     .btn {
       display: block;
       background-color: #06C755;
@@ -36,24 +63,17 @@
       font-size: 1rem;
       transition: 0.3s;
     }
+
     .btn:hover {
       background-color: #04a94b;
     }
-    .logo {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-    }
+
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- LOGO -->
-    <img class="logo" src="https://raw.githubusercontent.com/yuanshaofan555/line-page/main/0cb12a5d41c9bc911245450aac091ef.jpg" alt="Logo">
-    
-    <h1>please send order here</h1>
+    <h1>CJ Design</h1>
+    <p>please send order here</p>
 
     <!-- LINE 好友按钮 -->
     <a class="btn" href="https://line.me/ti/p/ePv7l3ilZA" target="_blank">Add me on LINE</a>
